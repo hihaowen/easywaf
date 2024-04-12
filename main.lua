@@ -10,15 +10,15 @@ function main()
             return true
         end
 
-	-- writeLog("this is a test.")
+	    -- writeLog("this is a test.")
         if checkIfIpInBlackRoom() then
             return denyResponse()
         elseif checkIfIsCCAttack() then
             return htmlResponse("Access deny.", ngx.HTTP_FORBIDDEN)
             -- return redirectResponse("https://cn.bing.com/?mkt=zh-CN")
-	    else
-	        return true 
-	    end
+        else
+            return true
+        end
     end
 end
 
